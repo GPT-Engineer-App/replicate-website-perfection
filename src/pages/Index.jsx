@@ -84,6 +84,82 @@ const Index = () => {
           </Box>
         </Flex>
       </Container>
+
+      {/* New Scroll Elements */}
+      <Container maxW="container.xl" py={8}>
+        <Heading size="lg" mb={4}>Skaffa mobilabonnemang</Heading>
+        <Flex wrap="wrap" spacing={4} justify="space-between">
+          <Text>Ingen bindningstid</Text>
+          <Text>Alltid billigt</Text>
+          <Text>Grym täckning</Text>
+        </Flex>
+        <Flex wrap="wrap" spacing={4} justify="space-between">
+          {/* Product Card 1 */}
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden" p={4} flex="1" maxW={{ base: "100%", md: "sm" }} m={2}>
+            <Box bg="yellow.400" color="black" px={2} py={1} borderRadius="md" mb={2}>
+              <Text>Spara 1200 kr</Text>
+            </Box>
+            <Text>100 GB</Text>
+            <Text>295 kr/mån</Text>
+            <Button colorScheme="pink" mt={4}>Beställ</Button>
+          </Box>
+          {/* Product Card 2 */}
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden" p={4} flex="1" maxW={{ base: "100%", md: "sm" }} m={2}>
+            <Box bg="yellow.400" color="black" px={2} py={1} borderRadius="md" mb={2}>
+              <Text>Spara 840 kr</Text>
+            </Box>
+            <Text>40 GB</Text>
+            <Text>225 kr/mån</Text>
+            <Button colorScheme="pink" mt={4}>Beställ</Button>
+          </Box>
+          {/* Product Card 3 */}
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden" p={4} flex="1" maxW={{ base: "100%", md: "sm" }} m={2}>
+            <Box bg="yellow.400" color="black" px={2} py={1} borderRadius="md" mb={2}>
+              <Text>Spara 360 kr</Text>
+            </Box>
+            <Text>20 GB</Text>
+            <Text>195 kr/mån</Text>
+            <Button colorScheme="pink" mt={4}>Beställ</Button>
+          </Box>
+          {/* Product Card 4 */}
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden" p={4} flex="1" maxW={{ base: "100%", md: "sm" }} m={2}>
+            <Text>6 GB</Text>
+            <Text>145 kr/mån</Text>
+            <Button colorScheme="pink" mt={4}>Beställ</Button>
+          </Box>
+        </Flex>
+        <Button variant="outline" colorScheme="pink" mt={4}>Se alla våra mobiler</Button>
+      </Container>
+
+      <Container maxW="container.xl" py={8}>
+        <Heading size="lg" mb={4}>Skaffa bredbandsabonnemang</Heading>
+        <Flex wrap="wrap" spacing={4} justify="space-between">
+          <Text>Obegränsad surf</Text>
+          <Text>Enkelt att komma igång</Text>
+          <Text>Utan startavgifter</Text>
+        </Flex>
+        <Flex wrap="wrap" spacing={4} justify="space-between">
+          {/* Product Card 1 */}
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden" p={4} flex="1" maxW={{ base: "100%", md: "sm" }} m={2}>
+            <Box bg="yellow.400" color="black" px={2} py={1} borderRadius="md" mb={2}>
+              <Text>Router ingår</Text>
+            </Box>
+            <Text>Obegränsad surf</Text>
+            <Text>299 kr/mån</Text>
+            <Button colorScheme="pink" mt={4}>Beställ</Button>
+          </Box>
+          {/* Product Card 2 */}
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden" p={4} flex="1" maxW={{ base: "100%", md: "sm" }} m={2}>
+            <Box bg="yellow.400" color="black" px={2} py={1} borderRadius="md" mb={2}>
+              <Text>Rabatt 1 år</Text>
+            </Box>
+            <Text>Obegränsad surf</Text>
+            <Text>349 kr/mån</Text>
+            <Button colorScheme="pink" mt={4}>Beställ</Button>
+          </Box>
+        </Flex>
+        <Button variant="outline" colorScheme="pink" mt={4}>Se våra mobilabonnemang</Button>
+      </Container>
     </Box>
   );
 };
