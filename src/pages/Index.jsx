@@ -171,23 +171,31 @@ const Index = () => {
         <Heading size="lg" mb={4}>Nyheter och erbjudanden</Heading>
         <Flex wrap="wrap" spacing={4} justify="space-between">
           {/* News Card 1 */}
-          <Box borderWidth="1px" borderRadius="md" overflow="hidden" p={4} flex="1" maxW={{ base: "100%", md: "sm" }} m={2}>
-            <Image src="//images.ctfassets.net/iidtcybzv1rq/4IxPJdhVltxkgJi2xe6uYd/808e8ba0c586dc295dcd8a2559b1a955/comviq-familj-1920x1900.png" alt="Familjeabonnemang" mb={4} />
-            <Heading size="md">Familjeabonnemang! 40 GB surf var.</Heading>
-            <Button colorScheme="pink" mt={4} as="a" href="/mobilabonnemang/familj">Läs mer</Button>
+          <Box position="relative" borderWidth="1px" borderRadius="md" overflow="hidden" p={0} flex="1" maxW="100%" m={2}>
+            <Image src="//images.ctfassets.net/iidtcybzv1rq/4IxPJdhVltxkgJi2xe6uYd/808e8ba0c586dc295dcd8a2559b1a955/comviq-familj-1920x1900.png" alt="Familjeabonnemang" />
+            <Box position="absolute" bottom="0" left="0" p={4} bg="rgba(0, 0, 0, 0.5)" color="white" width="100%">
+              <Heading size="md">Familjeabonnemang! 40 GB surf var.</Heading>
+              <Button colorScheme="pink" mt={4} as="a" href="/mobilabonnemang/familj">Läs mer</Button>
+            </Box>
           </Box>
-          {/* News Card 2 */}
-          <Box borderWidth="1px" borderRadius="md" overflow="hidden" p={4} flex="1" maxW={{ base: "100%", md: "sm" }} m={2}>
-            <Image src="//images.ctfassets.net/iidtcybzv1rq/5CHKLpAEb0SNlI0AtfdIJH/abba68b9441c05227153935d6f7247b2/comviq-trasig-mobil-16.9_1920x1080.png" alt="Byt in din gamla mobil" mb={4} />
-            <Heading size="md">Byt in din gamla mobil och få rabatt.</Heading>
-            <Button colorScheme="pink" mt={4} as="a" href="/mobiler/byt-in">Läs mer</Button>
-          </Box>
-          {/* News Card 3 */}
-          <Box borderWidth="1px" borderRadius="md" overflow="hidden" p={4} flex="1" maxW={{ base: "100%", md: "sm" }} m={2}>
-            <Image src="//images.ctfassets.net/iidtcybzv1rq/4uWBoHOHEaZfUTGMx0Tt4i/8b7c621c9b968cdb870aa4f0771fce48/Comviq-karim-vid-kiosk-16.9-1920x1080.png" alt="Nyheter och schyssta deals" mb={4} />
-            <Heading size="md">Nyheter och schyssta deals</Heading>
-            <Button colorScheme="pink" mt={4} as="a" href="/erbjudanden">Läs mer</Button>
-          </Box>
+          <Flex flex="1" maxW="100%" wrap="wrap">
+            {/* News Card 2 */}
+            <Box position="relative" borderWidth="1px" borderRadius="md" overflow="hidden" p={0} flex="1" maxW={{ base: "100%", md: "50%" }} m={2}>
+              <Image src="//images.ctfassets.net/iidtcybzv1rq/5CHKLpAEb0SNlI0AtfdIJH/abba68b9441c05227153935d6f7247b2/comviq-trasig-mobil-16.9_1920x1080.png" alt="Byt in din gamla mobil" />
+              <Box position="absolute" bottom="0" left="0" p={4} bg="rgba(0, 0, 0, 0.5)" color="white" width="100%">
+                <Heading size="md">Byt in din gamla mobil och få rabatt.</Heading>
+                <Button colorScheme="pink" mt={4} as="a" href="/mobiler/byt-in">Läs mer</Button>
+              </Box>
+            </Box>
+            {/* News Card 3 */}
+            <Box position="relative" borderWidth="1px" borderRadius="md" overflow="hidden" p={0} flex="1" maxW={{ base: "100%", md: "50%" }} m={2}>
+              <Image src="//images.ctfassets.net/iidtcybzv1rq/4uWBoHOHEaZfUTGMx0Tt4i/8b7c621c9b968cdb870aa4f0771fce48/Comviq-karim-vid-kiosk-16.9-1920x1080.png" alt="Nyheter och schyssta deals" />
+              <Box position="absolute" bottom="0" left="0" p={4} bg="rgba(0, 0, 0, 0.5)" color="white" width="100%">
+                <Heading size="md">Nyheter och schyssta deals</Heading>
+                <Button colorScheme="pink" mt={4} as="a" href="/erbjudanden">Läs mer</Button>
+              </Box>
+            </Box>
+          </Flex>
         </Flex>
       </Container>
 
