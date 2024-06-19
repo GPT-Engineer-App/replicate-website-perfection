@@ -1,4 +1,5 @@
-import { Box, Button, Container, Flex, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, HStack, Image, Text, VStack, Link, SimpleGrid } from "@chakra-ui/react";
+import { FaHeart, FaMobileAlt, FaQuestionCircle, FaUser, FaInfoCircle } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 
 const Index = () => {
@@ -200,18 +201,90 @@ const Index = () => {
       </Container>
 
       {/* Footer */}
-      <Container maxW="container.xl" py={8}>
-        <Heading size="lg" mb={4}>Ladda ner vår app!</Heading>
-        <Text>Du vet väl om att du kan göra det mesta i vår app? Betala dina fakturor, tanka på ditt kontantkort och mycket mer.</Text>
-        <HStack spacing={4} mt={4}>
-          <Button as="a" href="https://apps.apple.com/se/app/comviq/id123456789" target="_blank" rel="noopener noreferrer">
-            <Image src="/images/app-store-badge.svg" alt="App Store" />
-          </Button>
-          <Button as="a" href="https://play.google.com/store/apps/details?id=com.comviq" target="_blank" rel="noopener noreferrer">
-            <Image src="/images/google-play-badge.svg" alt="Google Play" />
-          </Button>
-        </HStack>
-      </Container>
+      <Box as="footer" bg="black" color="white" py={8}>
+        <Container maxW="container.xl">
+          <VStack spacing={8} align="flex-start">
+            <Box>
+              <Heading size="lg" mb={2}>Ladda ner vår app!</Heading>
+              <Text mb={4}>Du vet väl om att du kan göra det mesta i vår app? Betala dina fakturor, tanka på ditt kontantkort och mycket mer.</Text>
+              <HStack spacing={4}>
+                <Button as="a" href="https://apps.apple.com/se/app/comviq/id123456789" target="_blank" rel="noopener noreferrer">
+                  <Image src="/images/app-store-badge.svg" alt="App Store" />
+                </Button>
+                <Button as="a" href="https://play.google.com/store/apps/details?id=com.comviq" target="_blank" rel="noopener noreferrer">
+                  <Image src="/images/google-play-badge.svg" alt="Google Play" />
+                </Button>
+              </HStack>
+            </Box>
+            <SimpleGrid columns={{ base: 1, md: 5 }} spacing={8} w="full">
+              <Box>
+                <Heading size="sm" mb={4}><FaHeart /> Populära sidor</Heading>
+                <VStack align="flex-start">
+                  <Link href="#">Familjeabonnemang</Link>
+                  <Link href="#">Studentabonnemang</Link>
+                  <Link href="#">Seniorabonnemang</Link>
+                  <Link href="#">eSIM</Link>
+                  <Link href="#">5G hos Comviq</Link>
+                  <Link href="#">Surf</Link>
+                  <Link href="#">Byt in din gamla mobil</Link>
+                </VStack>
+              </Box>
+              <Box>
+                <Heading size="sm" mb={4}><FaMobileAlt /> Varumärken</Heading>
+                <VStack align="flex-start">
+                  <Link href="#">Apple iPhone</Link>
+                  <Link href="#">Apple Watch</Link>
+                  <Link href="#">Samsung Galaxy</Link>
+                  <Link href="#">Samsung Galaxy Watch</Link>
+                  <Link href="#">Google Pixel</Link>
+                  <Link href="#">Xiaomi</Link>
+                  <Link href="#">OnePlus</Link>
+                  <Link href="#">Sony Xperia</Link>
+                  <Link href="#">Motorola</Link>
+                </VStack>
+              </Box>
+              <Box>
+                <Heading size="sm" mb={4}><FaQuestionCircle /> Hjälp</Heading>
+                <VStack align="flex-start">
+                  <Link href="#">Till hjälp</Link>
+                  <Link href="#">Spåra din beställning</Link>
+                  <Link href="#">Driftinformation</Link>
+                  <Link href="#">Utland</Link>
+                  <Link href="#">Registrera kontantkort</Link>
+                </VStack>
+              </Box>
+              <Box>
+                <Heading size="sm" mb={4}><FaUser /> Mitt Konto</Heading>
+                <VStack align="flex-start">
+                  <Link href="#">Logga in</Link>
+                  <Link href="#">App till iOS</Link>
+                  <Link href="#">App till Android</Link>
+                  <Link href="#">Smarta tips i appen</Link>
+                </VStack>
+              </Box>
+              <Box>
+                <Heading size="sm" mb={4}><FaInfoCircle /> Om Comviq</Heading>
+                <VStack align="flex-start">
+                  <Link href="#">Comviqs historia</Link>
+                  <Link href="#">Jobba på Comviq</Link>
+                  <Link href="#">Kontakta oss</Link>
+                  <Link href="#">Se täckningskarta</Link>
+                  <Link href="#">Press</Link>
+                </VStack>
+              </Box>
+            </SimpleGrid>
+          </VStack>
+        </Container>
+        <Box bg="gray.800" py={4}>
+          <Container maxW="container.xl">
+            <HStack spacing={8} justify="center">
+              <Link href="#">Cookies</Link>
+              <Link href="#">Inställningar</Link>
+              <Link href="#">Säkerhet på nätet</Link>
+            </HStack>
+          </Container>
+        </Box>
+      </Box>
     </Box>
   );
 };
